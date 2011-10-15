@@ -1,4 +1,3 @@
-
 note :  this extension  originally  is a  fork  of  http://www.yiiframework.com/extension/scrolltop/ .
 but the  old  one  is need some more functionality  so  i  fork it from sensorario(http://www.yiiframework.com/user/6712/)
 
@@ -7,7 +6,22 @@ why this extension is named scrollTo  but scrollTop .
 
 if you need scroll from some link element to top please check out  the original version :http://www.yiiframework.com/extension/scrolltop/
  
-in your view file :
+
+how to use  it 
+  
+first  check out this extension and  put it to your protected/extensions dir
+or some orther dir,  then just use the path alias to refer it ,  i  don't know you will put it to 
+where  but  just use path alias of this widget . for me i  just put it to my costumized dir .
+
+if  you  put it to extension dir , you can  change the following path alias  'common.widgets.KScrollToWidget'
+to 'ext.KScrollToWidget' or  'ext.KScrollToWidget.KScrollToWidget' , just depends on your situation ,  if you don't
+understand how to use the path alias please refer to http://www.yiiframework.com/doc/api/1.1/YiiBase#getPathOfAlias-detail
+ or some wiki , forum topics 
+
+
+
+
+  in your view file :
  
  
 <div style="height:600px">
