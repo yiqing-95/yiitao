@@ -1,0 +1,57 @@
+
+note :  this extension  originally  is a  fork  of  http://www.yiiframework.com/extension/scrolltop/ .
+but the  old  one  is need some more functionality  so  i  fork it from sensorario(http://www.yiiframework.com/user/6712/)
+
+scrollTo ' s default behavior is scroll to the top of the document  , but you can also set an html tag 's id ,this is 
+why this extension is named scrollTo  but scrollTop .
+
+if you need scroll from some link element to top please check out  the original version :http://www.yiiframework.com/extension/scrolltop/
+ 
+in your view file :
+ 
+ 
+<div style="height:600px">
+    click the following  there button  to see the effects
+</div>
+    <div id='dest' > the left widget will scroll to  here   </div>
+    <div style="height:1200px">
+         click the following  there button  to see the effects
+    </div>
+<?php
+ // echo str_repeat('<br/>',65)."\n";
+
+
+$this->widget('common.widgets.KScrollToWidget',array(
+        'label' => 'Go on top',
+        'speed' => 'slow',
+                                                   'cssSettings'=>array(
+                                                      'background-color'=> '#78901f',
+                                                       'width'=>'200px'
+                                                  )
+));
+?>
+
+<?php
+$this->widget('common.widgets.KScrollToWidget',array(
+        'label' => 'toTop2',
+        'speed' => 2000,
+        'position'=> 'center',
+                                                  'dest'=> 100,
+                                                  'cssSettings'=>array(
+                                                    //  'background-color'=> '#446477'
+                                                  )
+)); ?>
+
+
+
+<?php
+
+$this->widget('common.widgets.KScrollToWidget',array(
+        'label' => 'scroll to the dest div',
+        'speed' => 200,
+        'destination' => 'dest' ,
+        'position'=> 'left',
+                                                   'cssSettings'=>array(
+                                                     'background-color'=> '#f26077'
+                                                  )
+)); ?>
